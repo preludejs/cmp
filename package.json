@@ -2,12 +2,13 @@
   "name": "@prelude/cmp",
   "version": "0.0.2",
   "description": "Cmp module.",
+  "type": "module",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "tsc && jest"
+    "test": "tsc && NODE_OPTIONS=--experimental-vm-modules jest"
   },
   "keywords": [
     "prelude",
