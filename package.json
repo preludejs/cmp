@@ -8,7 +8,8 @@
     "test": "test"
   },
   "scripts": {
-    "test": "tsc && NODE_OPTIONS=--experimental-vm-modules jest"
+    "test": "tsc && NODE_OPTIONS=--experimental-vm-modules jest",
+    "update": "npx npm-check --update --save-exact"
   },
   "keywords": [
     "prelude",
