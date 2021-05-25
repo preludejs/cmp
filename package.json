@@ -1,6 +1,6 @@
 {
   "name": "@prelude/cmp",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Cmp module.",
   "main": "index.js",
   "directories": {
@@ -9,7 +9,16 @@
   "scripts": {
     "test": "tsc && jest"
   },
-  "keywords": [ "prelude", "std", "lib", "stdlib", "library", "cmp", "compare", "sort" ],
+  "keywords": [
+    "prelude",
+    "std",
+    "lib",
+    "stdlib",
+    "library",
+    "cmp",
+    "compare",
+    "sort"
+  ],
   "author": "Mirek Rusin (https://github.com/mirek)",
   "license": "MIT",
   "devDependencies": {
