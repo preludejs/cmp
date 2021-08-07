@@ -4,6 +4,9 @@ export type R = -1 | 0 | 1
 /** Comparision function type. */
 export type Cmp<T> = (a: T, b: T) => R
 
+/** Curried comparision function type. */
+export type Cmp1<T> = (b: T) => R
+
 /** Comparision function type. */
 export type t<T> = Cmp<T>
 
