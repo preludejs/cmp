@@ -19,10 +19,9 @@
     }
   },
   "scripts": {
-    "test": "tsc && jest",
-    "update": "npx npm-check --update --save-exact",
-    "preversion": "./preversion.sh",
-    "postversion": "git push && git push --tags && npm publish"
+    "test": "make test",
+    "preversion": "make test",
+    "postversion": "make postversion"
   },
   "keywords": [
     "prelude",

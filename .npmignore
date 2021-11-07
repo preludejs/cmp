@@ -2,5 +2,6 @@
 .vscode
 *.sh
 jest.config.json
+Makefile
 test
 tsconfig.json
