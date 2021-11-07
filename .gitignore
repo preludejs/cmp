@@ -1,2 +1,3 @@
+*.cjs
 *.js
 node_modules
