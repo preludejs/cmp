@@ -1,4 +1,6 @@
 .github
 .vscode
+*.sh
 jest.config.json
 test
+tsconfig.json
