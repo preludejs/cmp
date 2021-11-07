@@ -3,19 +3,19 @@
   "version": "1.2.0",
   "description": "Cmp module.",
   "type": "module",
-  "module": "index.js",
-  "main": "index.cjs",
+  "module": "./index.js",
+  "main": "./cjs/index.js",
   "exports": {
     ".": {
       "import": "./index.js",
-      "require": "./index.cjs"
+      "require": "./cjs/index.js"
     },
     "./*.js": {
       "import": "./*.js",
-      "require": "./*.cjs"
+      "require": "./cjs/*.js"
     },
     "./*": {
-      "require": "./*.cjs"
+      "require": "./cjs/*.js"
     }
   },
   "directories": {

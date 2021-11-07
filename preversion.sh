@@ -1,9 +1,8 @@
 
 # cjs
-npx tsc -m commonjs
-for ts in *.ts test/*.ts; do
-  mv -- "${ts%.ts}.js" "${ts%.ts}.cjs"
-done
+rm -Rf cjs
+npx tsc -m commonjs --outDir cjs
+echo '{"type":"commonjs"}' > cjs/package.json
 
 # mjs
 npx tsc
