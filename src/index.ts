@@ -2,6 +2,7 @@ import * as Predicate from './predicate.js'
 import arrays from './arrays.js'
 import ascending from './ascending.js'
 import chain from './chain.js'
+import collator from './collator.js'
 import descending from './descending.js'
 import epsilon from './epsilon.js'
 import locale from './locale.js'
@@ -34,6 +35,7 @@ export {
   arrays,
   ascending,
   chain,
+  collator,
   descending,
   epsilon,
   every,
