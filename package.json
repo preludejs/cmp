@@ -1,6 +1,6 @@
 {
   "name": "@prelude/cmp",
-  "version": "1.5.0",
+  "version": "2.0.0",
   "description": "Cmp module.",
   "type": "module",
   "module": "./mjs/index.js",
