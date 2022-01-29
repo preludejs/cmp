@@ -1,4 +1,4 @@
-import * as Cmp from '../cjs/index.js'
+import * as Cmp from './index.js'
 
 test('sign', () => {
   expect(Cmp.sign(Infinity)).toBe(1)
