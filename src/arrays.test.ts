@@ -4,7 +4,7 @@ test('same', () => {
   expect(Cmp.arrays(Cmp.numbers)(
     [ 3, 5, 4 ],
     [ 3, 5, 4 ]
-  )).toBe(Cmp.equal)
+  )).toBe(Cmp.eq)
 })
 
 test('asc', () => {

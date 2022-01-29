@@ -1,4 +1,4 @@
-import { asc, equal, dsc, type Cmp } from './prelude.js'
+import { asc, eq, dsc, type Cmp } from './prelude.js'
 import numbers from './numbers.js'
 
 /**
@@ -13,7 +13,7 @@ export const arrays =
         switch (cmp(as[i], bs[i])) {
           case asc:
             return asc
-          case equal:
+          case eq:
             break
           case dsc:
             return dsc

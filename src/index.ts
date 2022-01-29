@@ -10,10 +10,27 @@ import partialB from './partial-b.js'
 import reversed from './reversed.js'
 import sign from './sign.js'
 import strings from './strings.js'
+import nullsOr from './nulls-or.js'
+import * as Predicate from './predicate.js'
+import ascending from './ascending.js'
+import descending from './descending.js'
+import nonAscending from './non-ascending.js'
+import nonDescending from './non-descending.js'
 
 export * from './prelude.js'
 
+const {
+  negate,
+  every
+} = Predicate
+
 export {
+  ascending,
+  descending,
+  nonAscending,
+  nonDescending,
+  Predicate,
+  nullsOr,
   arrays,
   chain,
   epsilon,
@@ -25,5 +42,7 @@ export {
   partialB,
   reversed,
   sign,
-  strings
+  strings,
+  negate,
+  every
 }

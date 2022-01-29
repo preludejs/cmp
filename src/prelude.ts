@@ -23,7 +23,7 @@ export type Strings = Cmp<string>
 export const oneBillionth = 1e-9
 
 /** Equal comparision result. */
-export const equal: R = 0
+export const eq: R = 0
 
 /** Ascending comparision result. */
 export const asc: R = -1
