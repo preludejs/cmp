@@ -1,7 +1,7 @@
 .github
 .vscode
 *.sh
+*.test.*
 jest.config.json
 Makefile
-test
 tsconfig.json
