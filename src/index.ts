@@ -5,6 +5,7 @@ import chain from './chain.js'
 import collator from './collator.js'
 import descending from './descending.js'
 import epsilon from './epsilon.js'
+import equal from './equal.js'
 import locale from './locale.js'
 import map from './map.js'
 import max from './max.js'
@@ -38,6 +39,7 @@ export {
   collator,
   descending,
   epsilon,
+  equal,
   every,
   locale,
   map,
