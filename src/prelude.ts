@@ -19,6 +19,11 @@ export type Numbers = Cmp<number>
 /** String comparision function type. */
 export type Strings = Cmp<string>
 
+export type Tail<T> =
+  T extends [_: unknown, ...tail: infer R] ?
+    R :
+    never
+
 /** Arbitrary epsilon (one billionth, 1e-9). */
 export const oneBillionth = 1e-9
 

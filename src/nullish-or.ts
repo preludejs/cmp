@@ -1,6 +1,6 @@
 import { type Cmp, type R, eq, asc, dsc } from './prelude.js'
 
-const nullsOr =
+const nullishOr =
   <T>(cmp: Cmp<T>) =>
     (a: undefined | null | T, b: undefined | null | T): R =>
       a == null ?
@@ -11,4 +11,4 @@ const nullsOr =
           dsc :
           cmp(a, b)
 
-export default nullsOr
+export default nullishOr
