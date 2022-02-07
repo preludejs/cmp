@@ -1,5 +1,6 @@
 import { R, Cmp, eq } from './prelude.js'
 
+/** @returns comparision function based on provided list of comparisions where first non-equal result is returned. */
 const chain =
   <T>(...cmps: Cmp<T>[]): Cmp<T> =>
     (a: T, b: T) => {

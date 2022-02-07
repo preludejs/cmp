@@ -3,6 +3,7 @@ import numbers from './numbers.js'
 
 /**
  * Compares arrays element-wise up to common length.
+ *
  * If all are equal then returns comparision result on array lengths.
  */
 export const arrays =
