@@ -17,3 +17,8 @@ export const every =
       }
       return true
     }
+
+/** @returns `true` if difference between `a` and `b` is within epsilon (default {@link Number.EPSILON}), `false` otherwise. */
+export const epsilon =
+  (a: number, b: number, epsilon_ = Number.EPSILON): boolean =>
+    Math.abs(a - b) <= epsilon_

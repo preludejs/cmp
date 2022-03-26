@@ -5,7 +5,6 @@ import chain from './chain.js'
 import collator from './collator.js'
 import curry from './curry.js'
 import descending from './descending.js'
-import epsilon from './epsilon.js'
 import equal from './equal.js'
 import locale from './locale.js'
 import map from './map.js'
@@ -27,6 +26,7 @@ import string_ from './string.js'
 export * from './prelude.js'
 
 const {
+  epsilon,
   every,
   negate
 } = Predicate

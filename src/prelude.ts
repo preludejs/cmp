@@ -15,9 +15,6 @@ export type Tail<T> =
     R :
     never
 
-/** Arbitrary epsilon (one billionth, 1e-9). */
-export const oneBillionth = 1e-9
-
 /** Equal comparision result. */
 export const eq: R = 0
 
