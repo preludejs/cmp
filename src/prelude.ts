@@ -5,19 +5,10 @@ export type R = -1 | 0 | 1
 export type Cmp<T> = (a: T, b: T) => R
 
 /** Curried comparision function type. */
-export type CmpA<T> = (a: T) => R
-
-/** Curried comparision function type. */
-export type CmpB<T> = (b: T) => R
+export type Cmp1<T> = (a: T) => R
 
 /** Comparision function type. */
 export type t<T> = Cmp<T>
-
-/** Number comparision function type. */
-export type Numbers = Cmp<number>
-
-/** String comparision function type. */
-export type Strings = Cmp<string>
 
 export type Tail<T> =
   T extends [_: unknown, ...tail: infer R] ?

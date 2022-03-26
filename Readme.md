@@ -1,3 +1,15 @@
+# Summary
+
+## String comparision result
+
+Strict comparision result `-1 | 0 | 1` is used instead of arbitrary `number`.
+
+This preserves soundness in contrast to wide `number` type which includes `NaN` (also to lesser extent `-Infinity`, `Infinity` and `-0` could affect soundness).
+
+Similarly to languages like C using `a - b` as number comparision should be discouraged as it can create underflow issues. Ie. comparision result of `Int32Array` elements can't be stored as `a - b` result in `Int32Array` as it would require 33 bits of storage to correctly represent this result (ie. `new Int32Array([ -2147483648 - 1 ]) // Int32Array(1) [ 2147483647 ]`).
+
+Narrow, low cardinality, precise type `-1 | 0 | 1` is easier to store, match on and use in combinator functions and in general. It promotes soundness and avoids potential bugs on edge cases.
+
 # Cmp module
 
 * `arrays: <T>(cmp: Cmp<T>) => (as: T[], bs: T[]) => R`
@@ -17,6 +29,10 @@
 * `collator: (collator_: Collator) => (a: string, b: string) => R`
 
   Returns collator based string comparision function.
+
+* `curry: <T>(cmp: Cmp<T>, a: T, position: 'lhs' | 'rhs' = 'lhs') => Cmp1<T>`
+
+  Returns curried comparision function by prefilling left hand side.
 
 * `descending: <T>(cmp: Cmp<T>) => t<T>`
 
@@ -74,7 +90,7 @@
 
   Returns composed non-nullable comparision function as null-handling function, `null` values are considered lower than non-`null` values.
 
-* `numbers: Numbers`
+* `number: (a: number, b: number) => R`
 
   Returns number comparision function.
 
@@ -85,14 +101,6 @@
 * `ofLt: <T>(lt: (a: T, b: T) => boolean) => (a: T, b: T) => R`
 
   Returns comparision function from lower-than function.
-
-* `partial: <T>(cmp: Cmp<T>, a: T) => CmpB<T>`
-
-  Returns curried comparision function by prefilling left hand side.
-
-* `partialB: <T>(cmp: Cmp<T>, b: T) => CmpA<T>`
-
-  Returns curried comparision function by prefilling right hand side.
 
 * `Predicate` module
 
@@ -122,7 +130,7 @@ import * as Cmp from '@prelude/cmp'
 console.log([
   'world',
   'hello'
-].sort(Cmp.strings))
+].sort(Cmp.string))
 // [ 'hello', 'world' ]
 ```
 

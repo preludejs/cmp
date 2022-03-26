@@ -1,10 +1,10 @@
-import numbers from './numbers.js'
+import number from './number.js'
 import type { Cmp } from './prelude.js'
 
 /** @returns nullish comparision function; nullish value is considered lower than non-nullish. */
 const nullish: Cmp<unknown> =
   (a, b) =>
-    numbers(
+    number(
       a == null ? 0 : 1,
       b == null ? 0 : 1
     )

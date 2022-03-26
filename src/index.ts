@@ -1,8 +1,9 @@
 import * as Predicate from './predicate.js'
-import arrays from './arrays.js'
+import array from './array.js'
 import ascending from './ascending.js'
 import chain from './chain.js'
 import collator from './collator.js'
+import curry from './curry.js'
 import descending from './descending.js'
 import epsilon from './epsilon.js'
 import equal from './equal.js'
@@ -12,18 +13,16 @@ import max from './max.js'
 import min from './min.js'
 import nonAscending from './non-ascending.js'
 import nonDescending from './non-descending.js'
+import null_ from './null.js'
 import nullish from './nullish.js'
 import nullishOr from './nullish-or.js'
-import nulls from './nulls.js'
-import nullsOr from './nulls-or.js'
-import numbers from './numbers.js'
+import nullOr from './null-or.js'
+import number_ from './number.js'
 import ofGt from './of-gt.js'
 import ofLt from './of-lt.js'
-import partial from './partial.js'
-import partialB from './partial-b.js'
 import reversed from './reversed.js'
 import sign from './sign.js'
-import strings from './strings.js'
+import string_ from './string.js'
 
 export * from './prelude.js'
 
@@ -33,10 +32,11 @@ const {
 } = Predicate
 
 export {
-  arrays,
+  array,
   ascending,
   chain,
   collator,
+  curry,
   descending,
   epsilon,
   equal,
@@ -48,17 +48,15 @@ export {
   negate,
   nonAscending,
   nonDescending,
+  null_ as null,
   nullish,
   nullishOr,
-  nulls,
-  nullsOr,
-  numbers,
+  nullOr,
+  number_ as number,
   ofGt,
   ofLt,
-  partial,
-  partialB,
   Predicate,
   reversed,
   sign,
-  strings
+  string_ as string
 }

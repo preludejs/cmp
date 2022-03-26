@@ -2,7 +2,7 @@ import type { R } from './prelude.js'
 
 /**
  * @returns sign of a number.
- * @throws {TypeError} if `value` is `NaN`.
+ * @throws {@link TypeError} if `value` are {@link NaN}.
  */
 const sign =
   (value: number): R => {

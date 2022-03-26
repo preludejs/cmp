@@ -2,7 +2,7 @@ import * as Cmp from './index.js'
 
 describe('nullable numbers', () => {
 
-  const cmp = Cmp.arrays(Cmp.nullsOr(Cmp.numbers))
+  const cmp = Cmp.array(Cmp.nullOr(Cmp.number))
 
   test('empty', () => {
     expect(cmp([], [])).toBe(Cmp.eq)

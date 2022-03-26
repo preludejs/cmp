@@ -8,8 +8,8 @@ test('chain', () => {
     { rank: 2, name: 'c' },
     { rank: 1, name: 'a' }
   ].sort(Cmp.chain(
-    Cmp.map(Cmp.numbers, _ => _.rank),
-    Cmp.map(Cmp.strings, _ => _.name)
+    Cmp.map(Cmp.number, _ => _.rank),
+    Cmp.map(Cmp.string, _ => _.name)
   ))).toEqual([
     { rank: 1, name: 'a' },
     { rank: 1, name: 'b' },

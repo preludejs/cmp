@@ -1,12 +1,12 @@
 import { asc, eq, dsc, type Cmp } from './prelude.js'
-import numbers from './numbers.js'
+import number from './number.js'
 
 /**
  * Compares arrays element-wise up to common length.
  *
  * If all are equal then returns comparision result on array lengths.
  */
-export const arrays =
+export const array =
   <T>(cmp: Cmp<T>) =>
     (as: T[], bs: T[]) => {
       const n = Math.min(as.length, bs.length)
@@ -20,7 +20,7 @@ export const arrays =
             return dsc
         }
       }
-      return numbers(as.length, bs.length)
+      return number(as.length, bs.length)
     }
 
-export default arrays
+export default array

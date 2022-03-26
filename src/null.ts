@@ -1,12 +1,12 @@
-import numbers from './numbers.js'
+import number from './number.js'
 import type { Cmp } from './prelude.js'
 
 /** @returns `null` comparision function; `null` value is considered lower than non-`null`. */
-const nulls: Cmp<unknown> =
+const null_: Cmp<unknown> =
   (a, b) =>
-    numbers(
+    number(
       a === null ? 0 : 1,
       b === null ? 0 : 1
     )
 
-export default nulls
+export default null_
