@@ -22,6 +22,7 @@ import ofLt from './of-lt.js'
 import reversed from './reversed.js'
 import sign from './sign.js'
 import string_ from './string.js'
+import undefinedOr from './undefined-or.js'
 
 export * from './prelude.js'
 
@@ -58,5 +59,6 @@ export {
   Predicate,
   reversed,
   sign,
-  string_ as string
+  string_ as string,
+  undefinedOr
 }
