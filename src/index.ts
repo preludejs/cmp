@@ -17,6 +17,7 @@ import nullish from './nullish.js'
 import nullishOr from './nullish-or.js'
 import nullOr from './null-or.js'
 import number_ from './number.js'
+import object from './object.js'
 import ofGt from './of-gt.js'
 import ofLt from './of-lt.js'
 import reversed from './reversed.js'
@@ -54,6 +55,7 @@ export {
   nullishOr,
   nullOr,
   number_ as number,
+  object,
   ofGt,
   ofLt,
   Predicate,
