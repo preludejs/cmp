@@ -34,3 +34,8 @@ export const asc: R =
 /** Descending comparision result. */
 export const dsc: R =
   1
+
+export type Value<T> =
+  T extends Cmp<infer U> ?
+    U :
+    never
