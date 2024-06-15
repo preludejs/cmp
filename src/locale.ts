@@ -3,7 +3,7 @@ import sign from './sign.js'
 
 /** @returns locale aware string comparision function. */
 const locale =
-  (...args: Tail<Parameters<String['localeCompare']>>) =>
+  (...args: Tail<Parameters<string['localeCompare']>>) =>
     (a: string, b: string) =>
       sign(a.localeCompare(b, ...args))
 

@@ -20,7 +20,7 @@ export type Kind =
   typeof kinds[number]
 
 export const rank =
-  Object.fromEntries(kinds.map((kind, i) => [kind, i])) as Record<Kind, number>
+  Object.fromEntries(kinds.map((kind, i) => [ kind, i ])) as Record<Kind, number>
 
 export const kindof =
   (a: unknown): Kind => {

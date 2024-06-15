@@ -18,6 +18,8 @@ export const array =
             break
           case dsc:
             return dsc
+          default:
+            throw new Error('Invalid comparison result.')
         }
       }
       return number(as.length, bs.length)

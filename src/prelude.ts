@@ -29,8 +29,8 @@ export type t<Lhs, Rhs = Lhs> =
   Cmp<Lhs, Rhs>
 
 export type Tail<T> =
-  T extends [_: unknown, ...tail: infer R] ?
-    R :
+  T extends [_: unknown, ...tail: infer U] ?
+    U :
     never
 
 /** Equal comparision result. */
