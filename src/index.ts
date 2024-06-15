@@ -25,14 +25,16 @@ import sign from './sign.js'
 import string_ from './string.js'
 import undefinedOr from './undefined-or.js'
 
+export * from './bigint.js'
 export * from './boolean.js'
-export * from './prelude.js'
+export * from './length.js'
+export * from './maybe-pairwise.js'
+export * from './maybe-subset.js'
 export * from './maybe-unknown.js'
 export * from './numeric.js'
-export * from './length.js'
+export * from './prelude.js'
 export * from './size.js'
-export * from './maybe-pairwise.js'
-export * from './bigint.js'
+export * from './values.js'
 
 const {
   epsilon,
