@@ -2,7 +2,7 @@ import { kindof, rank, type Kind } from './kindof.js'
 import { type MaybeR, eq } from './prelude.js'
 import bigint from './bigint.js'
 import boolean from './boolean.js'
-import iterable from './iterable.js'
+import maybePairwise from './maybe-pairwise.js'
 import maybeSubset from './maybe-subset.js'
 import number from './number.js'
 import numeric from './numeric.js'
@@ -31,7 +31,7 @@ const sameKind =
       case 'Set':
         return maybeSubset(a as Set<unknown>, b as Set<unknown>)
       case 'Array':
-        return iterable(a as Iterable<unknown>, b as Iterable<unknown>, maybeUnknown)
+        return maybePairwise(a as Iterable<unknown>, b as Iterable<unknown>, maybeUnknown)
       case 'Map':
       case 'object':
         return undefined
