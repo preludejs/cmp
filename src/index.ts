@@ -25,6 +25,7 @@ import sign from './sign.js'
 import string_ from './string.js'
 import undefinedOr from './undefined-or.js'
 
+export * from './boolean.js'
 export * from './prelude.js'
 export * from './length.js'
 export * from './size.js'
