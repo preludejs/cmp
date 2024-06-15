@@ -1,15 +1,30 @@
-import type { R } from './prelude.js'
+import { type R, eq, asc, dsc } from './prelude.js'
 
 /**
- * Number comparision function.
- * @throws {@link TypeError} if `a` or `b` are {@link NaN}.
+ * Compares numbers, singleton values follow `NaN < -Infinity < finite numbers < Infinity` ordering.
+ * NaN is considered equal to itself.
+ * -0 is considered equal to 0.
+ *
+ * @see kind
  */
 const number =
   (a: number, b: number): R => {
-    if (isNaN(a) || isNaN(b)) {
-      throw new TypeError('Expected number, got NaN.')
+    if (a < b) {
+      return asc
     }
-    return ((a > b ? 1 : 0) - (b > a ? 1 : 0)) as R
+    if (a > b) {
+      return dsc
+    }
+    if (a === b) {
+      return eq
+    }
+    if (Object.is(a, b)) {
+      return eq
+    }
+    if (Number.isNaN(a)) {
+      return asc
+    }
+    return dsc
   }
 
 export default number
