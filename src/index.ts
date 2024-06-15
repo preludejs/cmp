@@ -31,6 +31,7 @@ export * from './maybe-unknown.js'
 export * from './numeric.js'
 export * from './length.js'
 export * from './size.js'
+export * from './maybe-pairwise.js'
 export * from './bigint.js'
 
 const {
