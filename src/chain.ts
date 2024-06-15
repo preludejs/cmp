@@ -6,7 +6,8 @@ const chain =
     (a: T, b: T) => {
       let r: R = eq
       for (const cmp of cmps) {
-        if ((r = cmp(a, b)) !== eq) {
+        r = cmp(a, b)
+        if (r !== eq) {
           return r
         }
       }
