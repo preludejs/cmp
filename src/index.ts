@@ -26,6 +26,7 @@ import string_ from './string.js'
 import undefinedOr from './undefined-or.js'
 
 export * from './prelude.js'
+export * from './bigint.js'
 
 const {
   epsilon,
