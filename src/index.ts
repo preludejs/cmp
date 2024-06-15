@@ -27,6 +27,7 @@ import undefinedOr from './undefined-or.js'
 
 export * from './boolean.js'
 export * from './prelude.js'
+export * from './numeric.js'
 export * from './length.js'
 export * from './size.js'
 export * from './bigint.js'
